@@ -2,15 +2,22 @@ from __future__ import print_function
 
 import numpy as np
 import tflearn
+from tflearn.datasets import titanic
+from tflearn.data_utils import load_csv
 
 # Download the Titanic dataset
-from tflearn.datasets import titanic
 titanic.download_dataset('titanic_dataset.csv')
 
+
+import pandas as pd
+dataset = pd.read_csv('titanic_dataset.csv')
+dataset.info()
+print(dataset.head(5))
+
+exit()
+
 # Load CSV file, indicate that the first column represents labels
-from tflearn.data_utils import load_csv
-data, labels = load_csv('titanic_dataset.csv', target_column=0,
-                        categorical_labels=True, n_classes=2)
+data, labels = load_csv('titanic_dataset.csv', target_column=0, categorical_labels=True, n_classes=2)
 
 
 # Preprocessing function
