@@ -1,1 +1,1 @@
-nmap <silent> <leader>r :!docker-compose run quickstart<CR>
+nmap <silent> <leader>r :!docker-compose run baymax python %<CR>

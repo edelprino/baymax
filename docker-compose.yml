@@ -1,18 +1,9 @@
 version: '3.6'
 services:
-  hemingway:
-    container_name: hemingway
+  baymax:
+    container_name: baymax
     build:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./hemingway:/app
-
-  quickstart:
-    container_name: quickstart
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    volumes:
-      - ./quickstart:/app
-    command: python titanic.py
+      - .:/app
