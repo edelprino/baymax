@@ -9,10 +9,10 @@ filename = 'titanic_dataset.csv'
 titanic.download_dataset(filename)
 
 dataset = pd.read_csv(filename)
-dataset = dataset.drop(columns='name').drop(columns='ticket')
+labels = pd.get_dummies(dataset['survived']).values
+dataset = dataset.drop(columns='name').drop(columns='ticket').drop(columns='survived')
 dataset['sex'] = dataset['sex'].apply(lambda sex: 1 if sex == 'female' else 0)
 
-labels = pd.get_dummies(dataset.pop('survived')).values
 data = dataset.values
 
 # Build neural network
