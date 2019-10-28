@@ -6,12 +6,20 @@ from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.estimator import regression
 from tflearn.data_preprocessing import ImagePreprocessing
 from tflearn.data_augmentation import ImageAugmentation
+from keras.datasets import cifar10
 import pickle
+
 
 print('Loading Dataset...')
 # Load the data set
-X, Y, X_test, Y_test = pickle.load(open("full_dataset.pkl", "rb"))
+# X, Y, X_test, Y_test = pickle.load(open("full_dataset.pkl", "rb"))
+# X, Y, X_test, Y_test = pickle.load(open("cifar-10-batches-py/data_batch_1", 'rb'))
+X, Y = pickle.load(open("cifar-10-batches-py/data_batch_1", 'rb'))
 print('Dataset loaded...')
+
+print(X)
+X, Y = shuffle(X, Y)
+exit()
 
 # Shuffle the data
 X, Y = shuffle(X, Y)
