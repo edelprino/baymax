@@ -14,12 +14,19 @@ print('Loading Dataset...')
 # Load the data set
 # X, Y, X_test, Y_test = pickle.load(open("full_dataset.pkl", "rb"))
 # X, Y, X_test, Y_test = pickle.load(open("cifar-10-batches-py/data_batch_1", 'rb'))
-X, Y = pickle.load(open("cifar-10-batches-py/data_batch_1", 'rb'))
+# X, Y = pickle.load(open("cifar-10-batches-py/data_batch_1", 'rb'))
+dic = pickle.load(open("cifar-10-batches-py/data_batch_1", 'rb'))
+
+print(dic['data'][0])
+print(len(dic['data'][0]))
+print(dic['labels'][0])
+print(dic['filenames'][0])
+
 print('Dataset loaded...')
 
-print(X)
-X, Y = shuffle(X, Y)
 exit()
+
+X, Y = shuffle(X, Y)
 
 # Shuffle the data
 X, Y = shuffle(X, Y)
