@@ -3,10 +3,11 @@ services:
   baymax:
     container_name: baymax
     ports:
-      - '8888:8888'
-      - '6006:6006'
+      - 8888:8888
+      - 6006:6006
     build:
       context: .
       dockerfile: ./Dockerfile
+    command: 'tensorboard --host 0.0.0.0 --logdir /tmp/tflearn_logs/'
     volumes:
       - .:/app

@@ -4,6 +4,7 @@ FROM tensorflow/tensorflow
 RUN python -m pip install --user keras
 RUN python -m pip install --user tflearn
 RUN python -m pip install --user gym
+RUN python -m pip install --user flake8
 
 WORKDIR /app
 

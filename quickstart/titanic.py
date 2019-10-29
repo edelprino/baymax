@@ -24,7 +24,7 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 # Start training (apply gradient descent algorithm)
-model.fit(data, labels, n_epoch=20, batch_size=16, show_metric=True)
+model.fit(data, labels, n_epoch=20, batch_size=16, show_metric=True, run_id='titanic')
 
 # Let's create some data for DiCaprio and Winslet
 dicaprio = [3, 0, 19, 0, 0, 5.0000]

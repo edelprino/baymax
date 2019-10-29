@@ -23,3 +23,7 @@ docker-compose run baymax python quickstart/titanic.py
 
 ### To check
 - https://blog.floydhub.com/my-first-weekend-of-deep-learning/
+
+### TO DO
+- [ ] Up and run tensorboard to visualize logs
+- [ ] Train models online
