@@ -1,2 +1,5 @@
 *.csv
 *.pkl
+*.tfl.*
+cifar-10-batches-py
+checkpoint
