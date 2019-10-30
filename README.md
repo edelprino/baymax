@@ -8,11 +8,12 @@ Baymax is a repository where you can find some running ML models
 git clone git@github.com:edelprino/baymax.git
 cd baymax
 docker-compose build
+docker-compose up -d
 ```
 
 ### Run your model
 ```
-docker-compose run baymax python quickstart/titanic.py
+docker-compose exec baymax python quickstart/titanic.py
 ```
 
 ### Usefull links
