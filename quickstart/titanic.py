@@ -5,7 +5,7 @@ import pandas as pd
 from tflearn.datasets import titanic
 from tflearn.data_utils import load_csv
 
-filename = 'titanic_dataset.csv'
+filename = 'var/titanic_dataset.csv'
 titanic.download_dataset(filename)
 
 dataset = pd.read_csv(filename)
