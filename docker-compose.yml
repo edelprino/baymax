@@ -3,7 +3,6 @@ services:
   baymax:
     container_name: baymax
     ports:
-      - 8888:8888
       - 6006:6006
     build:
       context: .
