@@ -28,6 +28,7 @@ http://localhost:6006/
 ## Usefull links
 - https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471
 - https://towardsdatascience.com/cifar-10-image-classification-in-tensorflow-5b501f7dc77c
+- https://archive.ics.uci.edu/ml/index.php
 
 
 
