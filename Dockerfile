@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow
+FROM tensorflow/tensorflow:1.10.1
 # RUN python3
 # RUN python3 -m pip install --user numpy scipy matplotlib pandas sklearn pandas_datareader
 RUN python -m pip install --user keras
