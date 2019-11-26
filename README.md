@@ -31,9 +31,9 @@ http://localhost:6006/
 - https://archive.ics.uci.edu/ml/index.php
 
 
-
 ## To check
 - https://blog.floydhub.com/my-first-weekend-of-deep-learning/
+- https://www.kaggle.com/shivamb/a-very-comprehensive-tutorial-nn-cnn
 
 ## TO DO
 - [ ] Up and run tensorboard to visualize logs

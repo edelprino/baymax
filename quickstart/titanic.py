@@ -10,7 +10,8 @@ titanic.download_dataset(filename)
 
 dataset = pd.read_csv(filename)
 labels = pd.get_dummies(dataset['survived']).values
-dataset = dataset.drop(columns='name').drop(columns='ticket').drop(columns='survived')
+dataset = dataset.drop(columns='name').drop(
+    columns='ticket').drop(columns='survived')
 dataset['sex'] = dataset['sex'].apply(lambda sex: 1 if sex == 'female' else 0)
 
 data = dataset.values
@@ -24,7 +25,8 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 # Start training (apply gradient descent algorithm)
-model.fit(data, labels, n_epoch=20, batch_size=16, show_metric=True, run_id='titanic')
+model.fit(data, labels, n_epoch=20, batch_size=16, show_metric=True,
+          run_id='titanic', validation_set=0.1, shuffle=True)
 
 # Let's create some data for DiCaprio and Winslet
 dicaprio = [3, 0, 19, 0, 0, 5.0000]

@@ -44,7 +44,7 @@ img_aug = ImageAugmentation()
 print('Loading Dataset...')
 
 # Input is a 32x32 image with 3 color channels (red, green and blue)
-network = input_data(shape=[None, 32, 32, 3], data_preprocessing=img_prep, data_augmentation=img_aug)
+network = tflearn.input_data(shape=[None, 32, 32, 3], data_preprocessing=img_prep, data_augmentation=img_aug)
 # Step 1: Convolution
 network = conv_2d(network, 32, 3, activation='relu')
 
