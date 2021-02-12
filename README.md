@@ -9,18 +9,43 @@ git clone git@github.com:edelprino/baymax.git
 cd baymax
 docker-compose build
 ```
+as an alternative to the last build command, you can use 
+```
+make build
+```
 
 ### Start the tensorboard container
+```
+make up
+```
+or
 ```
 docker-compose up -d
 ```
 
+### Stop the container
+```
+make stop
+```
+or
+```
+docker-compose stop
+```
+
 ### Run your model
+```
+make go titanic.py
+```
+or
 ```
 docker-compose exec baymax python quickstart/titanic.py
 ```
 
 ### Train monitor
+```
+make logs
+```
+or
 ```
 http://localhost:6006/
 ```
@@ -36,5 +61,5 @@ http://localhost:6006/
 - https://www.kaggle.com/shivamb/a-very-comprehensive-tutorial-nn-cnn
 
 ## TO DO
-- [ ] Up and run tensorboard to visualize logs
+- [x] Up and run tensorboard to visualize logs
 - [ ] Train models online
